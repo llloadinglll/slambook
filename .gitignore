@@ -1,3 +1,4 @@
+3rdparty/*/
 *build*
 *.out
 CMakeCache.txt
@@ -6,3 +7,4 @@ cmake_install.cmake
 *.kdev4
 *.DS*
 .idea*
+*.orig
