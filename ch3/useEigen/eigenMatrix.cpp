@@ -49,7 +49,7 @@ int main( int argc, char** argv )
     v_3d << 3, 2, 1;
     vd_3d << 4,5,6;
     // 但是在Eigen里你不能混合两种不同类型的矩阵，像这样是错的
-    // Eigen::Matrix<double, 2, 1> result_wrong_type = matrix_23 * v_3d;
+    // Eigen::Matrix<double, 2, 1> result_wrong_type = matrix_23 * v_3d;  //matrix_23 is float
     // 应该显式转换
     Eigen::Matrix<double, 2, 1> result = matrix_23.cast<double>() * v_3d;
     cout << result << endl;
@@ -94,7 +94,7 @@ int main( int argc, char** argv )
     Eigen::Matrix<double,MATRIX_SIZE,1> x = matrix_NN.inverse()*v_Nd;
     cout <<"time use in normal inverse is " << 1000* (clock() - time_stt)/(double)CLOCKS_PER_SEC << "ms"<< endl;
     
-	// 通常用矩阵分解来求，例如QR分解，速度会快很多
+    // 通常用矩阵分解来求，例如QR分解，速度会快很多
     time_stt = clock();
     x = matrix_NN.colPivHouseholderQr().solve(v_Nd);
     cout <<"time use in Qr decomposition is " <<1000*  (clock() - time_stt)/(double)CLOCKS_PER_SEC <<"ms" << endl;

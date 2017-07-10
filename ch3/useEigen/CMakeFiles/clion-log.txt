@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /Users/ives/Git/slambook/ch3/useEigen
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/ives/Git/slambook/ch3/useEigen

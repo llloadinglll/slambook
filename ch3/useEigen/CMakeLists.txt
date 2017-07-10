@@ -7,6 +7,7 @@ set( CMAKE_CXX_FLAGS "-O3" )
 # include_directories( "/usr/include/eigen3" )
 
 # in osx and brew install
-include_directories( /usr/local/Cellar/eigen/3.3.3/include/eigen3 )
+#include_directories( /usr/local/Cellar/eigen/3.3.3/include/eigen3 )
+include_directories( /Users/ives/Git/slambook/eigen3.3.4 )
 
 add_executable( eigenMatrix eigenMatrix.cpp )
